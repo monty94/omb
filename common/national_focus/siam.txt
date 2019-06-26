@@ -1,0 +1,1146 @@
+focus_tree = {
+	id = SIA_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SIA
+			has_dlc = "Together for Victory"
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	###############################
+	######    Fascist   ###########
+	###############################
+
+	focus = {
+		id = SIA_stability
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+		
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = SIA_invite_foreign_investors 
+		icon = GFX_focus_generic_concessions
+		x = 2
+		y = 0
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	
+	}
+	
+	
+	focus = {
+		id = SIA_industrial_investment
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SIA_stability }
+		prerequisite = { focus = SIA_invite_foreign_investors }
+		x = -1
+		y = 1
+		relative_position_id = SIA_invite_foreign_investors
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_public_education_reform
+		icon = GFX_focus_research
+		prerequisite = { focus = SIA_industrial_investment }
+		x = 1
+		y = 1
+		relative_position_id = SIA_industrial_investment
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = SIA_local_arms_production
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SIA_industrial_investment }
+		x = 0
+		y = 2
+		relative_position_id = SIA_industrial_investment
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_long_term_economic_planning
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SIA_local_arms_production }
+		x = 0
+		y = 3
+		relative_position_id = SIA_industrial_investment
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = SIA_long_term_economic_planning
+		}
+	}
+
+	focus = {
+		id = SIA_local_arms_development
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SIA_local_arms_production }
+		x = 2
+		y = 2
+		relative_position_id = SIA_industrial_investment
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_local_arms_development
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_heavy_weapons_development
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = SIA_local_arms_development }
+		x = 2
+		y = 3
+		relative_position_id = SIA_industrial_investment
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_heavy_weapons_development
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = SIA_production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SIA_heavy_weapons_development }
+		prerequisite = { focus = SIA_long_term_economic_planning }
+		x = -1
+		y = 1
+		relative_position_id = SIA_heavy_weapons_development
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+############# ARMY
+
+	focus = {
+		id = SIA_great_war_studies
+		icon = GFX_goal_generic_small_arms
+		x = 10
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_lessons_of_the_great_war
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = { 
+		id = sia_analyzeenemies 
+		icon = GFX_focus_generic_cryptologic_bomb 
+		
+		ai_will_do = { factor = 2 } 
+		
+		x = 2
+		y = 1
+		relative_position_id = SIA_great_war_studies
+		
+		prerequisite = { focus = SIA_great_war_studies } 
+		
+		cost = 10  
+  
+		available_if_capitulated = yes  
+ 
+		completion_reward = { 
+			add_tech_bonus = { 
+ 				name = siaradar_focus 
+ 				bonus = 1 
+ 				uses = 1 
+ 				category = radar_tech 
+ 			}
+			add_tech_bonus = {
+				name = siacodebreaking_bonus
+				bonus = 1
+				uses = 1
+				category = computing_tech
+			}
+			add_tech_bonus = {
+				name = siacodebreaking_bonus2
+				bonus = 1
+				uses = 1
+				category = decryption_tech
+			}			
+			
+		} 
+	}
+	
+	focus = {
+		id = SIA_independent_army
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SIA_great_war_studies }
+		x = -3
+		y = 1
+		relative_position_id = SIA_great_war_studies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			army_experience = 25
+		}
+	}
+	
+	focus = {
+		id = SIA_guerilla
+		icon = GFX_focus_RAJ_indian_gurkhas
+		prerequisite = { focus = SIA_independent_army }
+		x = 0
+		y = 1
+		relative_position_id = SIA_independent_army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_completed_focus = RAJ_chindits
+			}
+		}
+
+		available = {
+			has_tech = tech_mountaineers
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = SIA_guerilla			
+		}	
+	}
+	
+	focus = {
+		id = SIA_the_bangalore_torpedo
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = SIA_great_war_studies }
+		prerequisite = { focus = SIA_public_education_reform }
+		prerequisite = { focus = SIA_guerilla }
+		prerequisite = { focus = sia_analyzeenemies }
+		x = 0
+		y = 3
+		relative_position_id = SIA_great_war_studies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RAJ_the_bangalore_torpedo
+				bonus = 1
+				uses = 2
+				category = engineers_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = SIA_royal_artillery
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SIA_the_bangalore_torpedo }
+		x = 0
+		y = 1
+		relative_position_id = SIA_the_bangalore_torpedo
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = SIA_royal_indian_artillery
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = SIA_army_motorization
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = SIA_the_bangalore_torpedo }
+		x = 2
+		y = 1
+		relative_position_id = SIA_the_bangalore_torpedo
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RAJ_army_motorization
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = SIA_modernizing_army
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SIA_army_motorization }
+		prerequisite = { focus = SIA_royal_artillery }
+		x = 1
+		y = 2
+		relative_position_id = SIA_the_bangalore_torpedo
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_modernizing_army
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_indian_armor
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SIA_modernizing_army }
+		x = 1
+		y = 3
+		relative_position_id = SIA_the_bangalore_torpedo
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_indian_armor
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = siafocus_on_mobile
+		icon = GFX_focus_hol_liberation
+		prerequisite = { focus = SIA_indian_armor }
+		mutually_exclusive = { focus = siafocus_on_battleplan }
+		mutually_exclusive = { focus = siafocus_on_firepower }
+		x = 0
+		y = 1
+		relative_position_id = SIA_indian_armor
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_on_mobile_tt 
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Wasp-sen Hu Chang"
+					gfx = "GFX_can1"
+					traits = { armor_officer skilled_staffer panzer_leader }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3
+				}
+
+
+			}
+		}
+	}
+	
+	focus = {
+		id = siafocus_on_firepower
+		icon = GFX_focus_hol_united_netherlands
+		prerequisite = { focus = SIA_indian_armor }
+		mutually_exclusive = { focus = siafocus_on_battleplan }
+		mutually_exclusive = { focus = siafocus_on_mobile }
+		x = -2
+		y = 1
+		relative_position_id = SIA_indian_armor
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_on_firepower_tt
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Komenti-san Haiku"
+					gfx = "GFX_komenti1"
+					traits = { infantry_officer skilled_staffer trait_engineer trickster  }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = siafocus_on_battleplan
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		prerequisite = { focus = SIA_indian_armor }
+		mutually_exclusive = { focus = siafocus_on_firepower }
+		mutually_exclusive = { focus = siafocus_on_mobile }
+		x = 2
+		y = 1
+		relative_position_id = SIA_indian_armor
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_on_battleplan_tt 
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Tiramisu Chung Lau"
+					gfx = "GFX_can2"
+					traits = { career_officer infantry_officer skilled_staffer infantry_leader commando }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 2
+				}
+			}
+		}
+	}
+
+
+
+################### NAVAL
+
+	focus = {
+		id = SIA_independent_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 16
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_royal_indian_navy
+				bonus = 1
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = SIA_mare_nostrum
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = SIA_independent_navy }
+		x = 0
+		y = 1
+		relative_position_id = SIA_independent_navy
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 10
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}	
+	}
+	
+	focus = {
+		id = SIA_screening_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SIA_mare_nostrum }
+		prerequisite = { focus = SIA_public_education_reform }
+		x = 0
+		y = 3
+		relative_position_id = SIA_independent_navy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_screening_effort
+				bonus = 1
+				uses = 1
+				category = dd_tech
+				category = cl_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_cruiser_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SIA_mare_nostrum }
+		prerequisite = { focus = SIA_public_education_reform }
+		x = 2
+		y = 3
+		relative_position_id = SIA_independent_navy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_cruiser_effort
+				bonus = 1
+				uses = 1
+				category = bc_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SIA_screening_effort }
+		x = 0
+		y = 4
+		relative_position_id = SIA_independent_navy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_submarine_effort
+				bonus = 1
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_capital_ship_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SIA_screening_effort focus = SIA_cruiser_effort }
+		x = 2
+		y = 4
+		relative_position_id = SIA_independent_navy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_capital_ship_effort
+				bonus = 1
+				uses = 1
+				category = cv_tech
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_modernizing_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = SIA_submarine_effort focus = SIA_capital_ship_effort }
+		x = 1
+		y = 5
+		relative_position_id = SIA_independent_navy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_modernizing_navy
+				bonus = 1
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+	}

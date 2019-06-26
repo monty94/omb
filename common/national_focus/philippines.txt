@@ -1,0 +1,1309 @@
+focus_tree = {
+id = 'philippines'
+country = {
+factor=0
+modifier = {
+add = 20
+tag = PHI
+}
+}
+default = no
+#Custom focuses start here
+
+############################################   NAVY FOCUS   ############################################
+#Focus for PHI_Philippines Get the Army to the Sea 
+	focus = { 
+		id = phi_philippinesgetthearmytothesea 
+		icon = GFX_goal_generic_build_navy 
+		ai_will_do = { factor = 1 } 
+		x =0 
+		y =0 
+
+		available = { any_state = { 
+ 				is_coastal = yes 
+ 				is_controlled_by = ROOT 
+ 			} } 
+		cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ navy_experience = 25 
+ 			if = { 
+ 				limit = { 
+ 					NOT = { 
+ 						any_owned_state = { 
+ 							dockyard > 0 
+ 							free_building_slots = { 
+ 								building = dockyard 
+ 								size > 2 
+ 								include_locked = yes 
+ 							} 
+ 						} 
+ 					} 
+ 					any_owned_state = { 
+ 						is_coastal = yes 
+ 					} 
+ 				} 
+ 				random_owned_controlled_state = { 
+ 					limit = { 
+ 						is_coastal = yes 
+ 						free_building_slots = { 
+ 							building = dockyard 
+ 							size > 2 
+ 							include_locked = yes 
+ 						} 
+ 					} 
+ 					add_extra_state_shared_building_slots = 3 
+ 					add_building_construction = { 
+ 						type = dockyard 
+ 						level = 3 
+ 						instant_build = yes 
+ 					} 
+ 				} 
+ 				set_country_flag = naval_effort_built 
+ 			} 
+ 			if = { 
+ 				limit = { 
+ 					NOT = { has_country_flag = naval_effort_built } 
+ 					any_owned_state = { 
+ 						dockyard > 0 
+ 						free_building_slots = { 
+ 							building = dockyard 
+ 							size > 2 
+ 							include_locked = yes 
+ 						} 
+ 					} 
+ 				} 
+ 				random_owned_controlled_state = { 
+ 					limit = { 
+ 						dockyard > 0 
+ 						free_building_slots = { 
+ 							building = dockyard 
+ 							size > 2 
+ 							include_locked = yes 
+ 						} 
+ 					} 
+ 					add_extra_state_shared_building_slots = 3 
+ 					add_building_construction = { 
+ 						type = dockyard 
+ 						level = 3 
+ 						instant_build = yes 
+ 					} 
+ 				} 
+ 				set_country_flag = naval_effort_built 
+ 			} 
+ 			if = { 
+ 				limit = { 
+ 					NOT = { has_country_flag = naval_effort_built } 
+ 					NOT = { 
+ 						any_owned_state = { 
+ 							free_building_slots = { 
+ 								building = dockyard 
+ 								size > 2 
+ 								include_locked = yes 
+ 							} 
+ 						} 
+ 					} 
+ 				} 
+ 				random_state = { 
+ 					limit = { 
+ 						controller = { tag = ROOT } 
+ 						free_building_slots = { 
+ 							building = dockyard 
+ 							size > 2 
+ 							include_locked = yes 
+ 						} 
+ 					} 
+ 					add_extra_state_shared_building_slots = 3 
+ 					add_building_construction = { 
+ 						type = dockyard 
+ 						level = 3 
+ 						instant_build = yes 
+ 					} 
+ 				} 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Advanced Submarine Tactics 
+		focus = { 
+		id = phi_advancedsubmarinetactics 
+		icon = GFX_goal_generic_navy_doctrines_tactics 
+		ai_will_do = { factor = 1 } 
+ x =1 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_philippinesgetthearmytothesea} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ 				name = phi_sub_op_bonus 
+ 				bonus = 1 
+ 				uses = 4 
+ 				technology = convoy_interdiction_ti 
+ 				technology = unrestricted_submarine_warfare 
+ 				technology = wolfpacks 
+ 				technology = advanced_submarine_warfare 
+ 				technology = combined_operations_raiding 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Cell Production 
+		focus = { 
+		id = phi_cellproduction 
+		icon = GFX_goal_generic_navy_submarine 
+		ai_will_do = { factor = 1 } 
+ x =1 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_advancedsubmarinetactics} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+add_ideas = GER_modular_construction
+ } 
+ }
+ ############################################   AIR FOCUS   ############################################
+ #Focus for PHI_Aviation Effort 
+		focus = { 
+		id = phi_aviationeffort 
+		icon = GFX_goal_generic_air_fighter2 
+		ai_will_do = { factor = 1 } 
+ x =2 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ air_experience = 25 
+  
+ 			if = { 
+ 				limit = { 
+ 					capital_scope = { 
+ 						NOT = { 
+ 							free_building_slots = { 
+ 								building = air_base 
+ 								size > 1 
+ 							} 
+ 						} 
+ 					} 
+ 				} 
+ 				random_owned_controlled_state = { 
+ 					limit = { 
+ 						free_building_slots = { 
+ 							building = air_base 
+ 							size > 1 
+ 						} 
+ 					} 
+ 					add_building_construction = { 
+ 						type = air_base 
+ 						level = 2 
+ 						instant_build = yes 
+ 					} 
+ 					ROOT = { set_country_flag = aviation_effort_AB } 
+ 				} 
+ 			} 
+ 			if = { 
+ 				limit = { 
+ 					capital_scope = { 
+ 						free_building_slots = { 
+ 							building = air_base 
+ 							size > 1 
+ 						} 
+ 					} 
+ 				} 
+ 				capital_scope = { 
+ 					add_building_construction = { 
+ 						type = air_base 
+ 						level = 2 
+ 						instant_build = yes 
+ 					} 
+ 					ROOT = { set_country_flag = aviation_effort_AB } 
+ 				} 
+ 			} 
+ 			add_tech_bonus = { 
+ 				name = phi_air_doc_bonus 
+ 				bonus = 1 
+ 				uses = 1 
+ 				category = air_doctrine 
+ 			} 
+ } 
+ }
+ #Focus for PHI_CAS Effort 
+		focus = { 
+		id = phi_caseffort 
+		icon = GFX_goal_generic_air_fighter 
+		ai_will_do = { factor = 1 } 
+ x =3 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_aviationeffort} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ 				name = phi_CAS_bonus 
+ 				bonus = 1
+ 				uses = 1 
+ 				category = cas_bomber 
+ 				} 
+ } 
+ }
+ #Focus for PHI_Aviation Effort II 
+		focus = { 
+		id = phi_aviationeffortii 
+		icon = GFX_goal_generic_air_doctrine 
+		ai_will_do = { factor = 1 } 
+ x =3 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_caseffort} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ air_experience = 25 
+ 			if = { 
+ 				limit = { 
+ 					capital_scope = { 
+ 						OR = { 
+ 							NOT = { is_controlled_by = ROOT } 
+ 							NOT = { 
+ 								free_building_slots = { 
+ 									building = air_base 
+ 									size > 1 
+ 								} 
+ 							} 
+ 						} 
+ 					} 
+ 				} 
+ 				random_owned_controlled_state = { 
+ 					limit = { 
+ 						free_building_slots = { 
+ 							building = air_base 
+ 							size > 1 
+ 						} 
+ 					} 
+ 					add_building_construction = { 
+ 						type = air_base 
+ 						level = 2 
+ 						instant_build = yes 
+ 					} 
+ 					ROOT = { set_country_flag = aviation_effort_2_AB } 
+ 				} 
+ 			} 
+ 			if = { 
+ 				limit = { 
+ 					capital_scope = { 
+ 						is_controlled_by = ROOT 
+ 						free_building_slots = { 
+ 							building = air_base 
+ 							size > 1 
+ 						} 
+ 					} 
+ 				} 
+ 				capital_scope = { 
+ 					add_building_construction = { 
+ 						type = air_base 
+ 						level = 2 
+ 						instant_build = yes 
+ 					}				 
+ 					ROOT = { set_country_flag = aviation_effort_2_AB } 
+ 				} 
+ 			} 
+ 			add_tech_bonus = { 
+ 				name =  phi_air_doc_bonus 
+ 				bonus = 1 
+ 				uses = 1 
+ 				category = air_doctrine 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Paratrooper Focus 
+		focus = { 
+		id = phi_paratrooperfocus 
+		icon = GFX_focus_chi_british_cooperation 
+		ai_will_do = { factor = 1 } 
+ x =3 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_aviationeffortii} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ 				name = Phi_special_bonus 
+ 				bonus = 1 
+ 				uses = 1 
+ 				technology = paratroopers 
+ 				technology = paratroopers2 
+                                 technology = paratroopers3 
+ 			} 
+ } 
+ }
+  ##########################################   SOL ARMY FOCUS   ##########################################
+ #Focus for PHI_Configure Military 
+		focus = { 
+		id = phi_configuremilitary 
+		icon = GFX_focus_chi_army_reform 
+		ai_will_do = { factor = 1 } 
+ x =5 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ army_experience = 5 
+ 			add_tech_bonus = { 
+ 				name = land_doc_bonus 
+ 				bonus = 1 
+ 				uses = 1 
+ 				category = land_doctrine 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Motorization Effort 
+		focus = { 
+		id = phi_motorizationeffort 
+		icon = GFX_goal_generic_army_motorized 
+		ai_will_do = { factor = 1 } 
+ x =5 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_configuremilitary} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ 				name = phimotorized_bonus 
+ 				bonus = 1 
+ 				technology = motorised_infantry 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Mechanization Effort 
+		focus = { 
+		id = phi_mechanizationeffort 
+		icon = GFX_goal_generic_build_tank 
+		ai_will_do = { factor = 1 } 
+ x =5 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_motorizationeffort} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ 				name = phimotorized_bonus 
+ 				ahead_reduction = 0.5 
+ 				uses = 1 
+ 				category = motorized_equipment 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Support Equipment Effort 
+		focus = { 
+		id = phi_supportequipmenteffort 
+		icon = GFX_goal_generic_army_artillery 
+		ai_will_do = { factor = 1 } 
+ x =6 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_configuremilitary} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ 				name = phispecial_bonus1
+ 				bonus = 1 
+ 				uses = 1
+ 				technology = tech_engineers 
+ 				technology = tech_engineers2 
+ 				technology = tech_engineers3 
+				technology = tech_engineers4 
+ } 
+ add_tech_bonus = { 
+ 				name = phispecial_bonus2
+ 				bonus = 1 
+ 				uses = 1
+ 				technology = tech_recon 
+ 				technology = tech_recon2 
+ 				technology = tech_recon3 
+				technology = tech_recon4 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Equipment Effort 
+		focus = { 
+		id = phi_equipmenteffort 
+		icon = GFX_goal_generic_axis_build_infantry 
+		ai_will_do = { factor = 1 } 
+ x =7 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_configuremilitary} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ 				name = phiinfantry_artillery_bonus 
+ 				bonus = 1 
+ 				uses = 1 
+ 				category = infantry_weapons 
+ 				category = artillery 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Equipment Effort II 
+		focus = { 
+		id = phi_equipmenteffortii 
+		icon = GFX_goal_generic_army_artillery2 
+		ai_will_do = { factor = 1 } 
+ x =7 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_equipmenteffort} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ 				name = phiinfantry_artillery_bonus 
+ 				bonus = 1 
+ 				uses = 1 
+ 				category = infantry_weapons 
+ 				category = artillery 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Doctrine Effort 
+		focus = { 
+		id = phi_doctrineeffort 
+		icon = GFX_goal_generic_axis_build_infantry 
+		ai_will_do = { factor = 1 } 
+ x =6 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_supportequipmenteffort} 
+  prerequisite = { focus =phi_equipmenteffortii} 
+  prerequisite = { focus =phi_mechanizationeffort} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ army_experience = 5 
+ 			add_tech_bonus = { 
+ 				name = philand_doc_bonus 
+ 				bonus = 1 
+ 				uses = 2
+ 				category = land_doctrine 
+ 			} 
+ } 
+ }
+  ##########################################   POLITICS FOCUS   ##########################################
+ #Focus for PHI_Shape The Government 
+		focus = { 
+		id = phi_shapethegovernment 
+		icon = GFX_goal_generic_demand_territory 
+		ai_will_do = { factor = 1 } 
+ x =11 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = 150
+ } 
+ }
+ #Focus for PHI_The New Constitution 
+		focus = { 
+		id = phi_thenewconstitution 
+		icon = GFX_goal_generic_forceful_treaty 
+		ai_will_do = { factor = 1 } 
+ x =18 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_shapethegovernment} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_war_support = 0.1 
+ add_stability = 0.1 
+ } 
+ }
+ #Focus for PHI_RESEARCH & DEVELOPMENT 
+		focus = { 
+		id = phi_researchdevelopment 
+		icon = GFX_focus_research 
+		ai_will_do = { factor = 1 } 
+ x =19 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_thenewconstitution} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_research_slot = 1 
+ } 
+ }
+  ############################################   SERVE FOCUS   ############################################
+  #Focus for PHI_Serve The Public 
+		focus = { 
+		id = phi_servethepublic 
+		icon = GFX_goal_generic_propaganda 
+		ai_will_do = { factor = 1 } 
+ x =20 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ available = {date < 1937.1.1 
+ political_power = 100 } 
+ cost = 5  
+  available_if_capitulated = yes  
+ completion_reward = { 
+  add_ideas = phi_hizmet
+ } 
+ }
+  #Focus for PHI_American Medical Supervision 
+		focus = { 
+		id = phi_americanmedicalsupervision 
+		icon = GFX_focus_chi_mission_to_the_us 
+		ai_will_do = { factor = 1 } 
+ x =22 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ available = { political_power = 100 } 
+ cost = 5  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_ideas = phi_abdyardim
+ } 
+ }
+ #Focus for PHI_Open Hospital 
+		focus = { 
+		id = phi_openhospital 
+		icon = GFX_focus_generic_concessions 
+		ai_will_do = { factor = 1 } 
+ x =21 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_servethepublic} 
+  prerequisite = { focus =phi_americanmedicalsupervision} 
+ available = {date > 1938.1.1 } 
+ cost = 5  
+  available_if_capitulated = yes  
+   completion_reward = { 
+  add_ideas = phi_hastanemasraf
+  }
+ }
+ #Focus for PHI_Fight With Malaria Microbe 
+		focus = { 
+		id = phi_fightwithmalariamicrobe 
+		icon = GFX_goal_generic_national_unity 
+		ai_will_do = { factor = 1 } 
+ x =21 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_openhospital} 
+ available = {date > 1939.1.1 } 
+ cost = 20  
+  available_if_capitulated = yes  
+  completion_reward = { 
+  add_stability = 0.1 
+  }
+ }
+ 
+  #Focus for PHI_Overcoming The Disease Crisis 
+		focus = { 
+		id = phi_overcomingthediseasecrisis
+		icon = GFX_goal_generic_national_unity 
+		ai_will_do = { factor = 1 } 
+ x =21 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_fightwithmalariamicrobe} 
+ available = { > 1939.1.1 } 
+ cost = 10  
+  available_if_capitulated = yes  
+  completion_reward = { 
+  remove_ideas = phi_hastanemasraf
+  remove_ideas = phi_hizmet
+  
+  }
+ }
+   ############################################   INDUSTRIAL FOCUS   ############################################
+ #Focus for PHI_Industrial Enterprises 
+		focus = { 
+		id = phi_industrialenterprises 
+		icon = GFX_goal_generic_construction 
+		ai_will_do = { factor = 1 } 
+ x =10 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_shapethegovernment} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ 				name = industrial_bonus 
+ 				bonus = 1
+ 				uses = 1 
+ 				category = industry 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Build New Factories 
+		focus = { 
+		id = phi_buildnewfactories 
+		icon = GFX_goal_generic_construct_civ_factory 
+		ai_will_do = { factor = 1 } 
+ x =9 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_industrialenterprises} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ random_owned_controlled_state = { 
+ 				limit = { 
+ 					free_building_slots = { 
+ 						building = industrial_complex 
+ 						size > 1 
+ 						include_locked = yes 
+ 					} 
+ 					OR = { 
+ 						is_in_home_area = yes 
+ 						NOT = { 
+ 							owner = { 
+ 								any_owned_state = { 
+ 									free_building_slots = { 
+ 										building = industrial_complex 
+ 										size > 1 
+ 										include_locked = yes 
+ 									} 
+ 									is_in_home_area = yes 
+ 								} 
+ 							} 
+ 						} 
+ 					} 
+ 				} 
+ 				add_extra_state_shared_building_slots = 2 
+ 				add_building_construction = { 
+ 					type = industrial_complex 
+ 					level = 2
+ 					instant_build = yes 
+ 				} 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Infrastructure Effort 
+		focus = { 
+		id = phi_infrastructureeffort 
+		icon = GFX_goal_generic_construct_infrastructure 
+		ai_will_do = { factor = 1 } 
+ x =9 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_buildnewfactories} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ random_owned_controlled_state = { 
+ 				limit = { 
+ 					free_building_slots = { 
+ 						building = infrastructure 
+ 						size > 0 
+ 					} 
+ 					OR = { 
+ 						is_in_home_area = yes 
+ 						NOT = { 
+ 							owner = { 
+ 								any_owned_state = { 
+ 									free_building_slots = { 
+ 										building = infrastructure 
+ 										size > 0 
+ 									} 
+ 									is_in_home_area = yes 
+ 								} 
+ 							} 
+ 						} 
+ 					} 
+ 				} 
+ 				add_building_construction = { 
+ 					type = infrastructure 
+ 					level = 2 
+ 					instant_build = yes 
+ 				} 
+ 			} 
+ 			random_owned_controlled_state = { 
+ 				limit = { 
+ 					free_building_slots = { 
+ 						building = infrastructure 
+ 						size > 2 
+ 					} 
+ 					OR = { 
+ 						is_in_home_area = yes 
+ 						NOT = { 
+ 							owner = { 
+ 								any_owned_state = { 
+ 									free_building_slots = { 
+ 										building = infrastructure 
+ 										size > 2 
+ 									} 
+ 									is_in_home_area = yes 
+ 								} 
+ 							} 
+ 						} 
+ 					} 
+ 				} 
+ 				add_building_construction = { 
+ 					type = infrastructure 
+ 					level = 2 
+ 					instant_build = yes 
+ 				} 
+ 			} 
+ } 
+ }
+ #Focus for PHI_More Construction 
+		focus = { 
+		id = phi_moreconstruction 
+		icon = GFX_goal_generic_construct_civ_factory 
+		ai_will_do = { factor = 1 } 
+ x =9 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_infrastructureeffort} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ random_owned_controlled_state = { 
+ 				limit = { 
+ 					free_building_slots = { 
+ 						building = industrial_complex 
+ 						size > 1 
+ 						include_locked = yes 
+ 					} 
+ 					OR = { 
+ 						is_in_home_area = yes 
+ 						NOT = { 
+ 							owner = { 
+ 								any_owned_state = { 
+ 									free_building_slots = { 
+ 										building = industrial_complex 
+ 										size > 1 
+ 										include_locked = yes 
+ 									} 
+ 									is_in_home_area = yes 
+ 								} 
+ 							} 
+ 						} 
+ 					} 
+ 				} 
+ 				add_extra_state_shared_building_slots = 2 
+ 				add_building_construction = { 
+ 					type = industrial_complex 
+ 					level = 2 
+ 					instant_build = yes 
+ 				} 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Investment In The Military Industry 
+		focus = { 
+		id = phi_investmentinthemilitaryindustry 
+		icon = GFX_goal_generic_construct_mil_factory 
+		ai_will_do = { factor = 1 } 
+ x =11 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_industrialenterprises} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ random_owned_controlled_state = { 
+ 				limit = { 
+ 					free_building_slots = { 
+ 						building = arms_factory 
+ 						size > 0 
+ 						include_locked = yes 
+ 					} 
+ 					OR = { 
+ 						is_in_home_area = yes 
+ 						NOT = { 
+ 							owner = { 
+ 								any_owned_state = { 
+ 									free_building_slots = { 
+ 										building = arms_factory 
+ 										size > 0 
+ 										include_locked = yes 
+ 									} 
+ 									is_in_home_area = yes 
+ 								} 
+ 							} 
+ 						} 
+ 					} 
+ 				} 
+ 				add_extra_state_shared_building_slots = 2 
+ 				add_building_construction = { 
+ 					type = arms_factory 
+ 					level = 2 
+ 					instant_build = yes 
+ 				} 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Infrastructure Effort II 
+		focus = { 
+		id = phi_infrastructureeffortii 
+		icon = GFX_goal_generic_construct_infrastructure 
+		ai_will_do = { factor = 1 } 
+ x =11 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_investmentinthemilitaryindustry} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ random_owned_controlled_state = { 
+ 				limit = { 
+ 					free_building_slots = { 
+ 						building = infrastructure 
+ 						size > 0 
+ 					} 
+ 					OR = { 
+ 						is_in_home_area = yes 
+ 						NOT = { 
+ 							owner = { 
+ 								any_owned_state = { 
+ 									free_building_slots = { 
+ 										building = infrastructure 
+ 										size > 0 
+ 									} 
+ 									is_in_home_area = yes 
+ 								} 
+ 							} 
+ 						} 
+ 					} 
+ 				} 
+ 				add_building_construction = { 
+ 					type = infrastructure 
+ 					level = 1 
+ 					instant_build = yes 
+ 				} 
+ 			} 
+ 			random_owned_controlled_state = { 
+ 				limit = { 
+ 					free_building_slots = { 
+ 						building = infrastructure 
+ 						size > 1 
+ 					} 
+ 					OR = { 
+ 						is_in_home_area = yes 
+ 						NOT = { 
+ 							owner = { 
+ 								any_owned_state = { 
+ 									free_building_slots = { 
+ 										building = infrastructure 
+ 										size > 1 
+ 									} 
+ 									is_in_home_area = yes 
+ 								} 
+ 							} 
+ 						} 
+ 					} 
+ 				} 
+ 				add_building_construction = { 
+ 					type = infrastructure 
+ 					level = 2 
+ 					instant_build = yes 
+ 				} 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Build New Military Factories 
+		focus = { 
+		id = phi_buildnewmilitaryfactories 
+		icon = GFX_goal_generic_construct_mil_factory 
+		ai_will_do = { factor = 1 } 
+ x =11 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_infrastructureeffortii} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ random_owned_controlled_state = { 
+ 				limit = { 
+ 					free_building_slots = { 
+ 						building = arms_factory 
+ 						size > 0 
+ 						include_locked = yes 
+ 					} 
+ 					OR = { 
+ 						is_in_home_area = yes 
+ 						NOT = { 
+ 							owner = { 
+ 								any_owned_state = { 
+ 									free_building_slots = { 
+ 										building = arms_factory 
+ 										size > 0 
+ 										include_locked = yes 
+ 									} 
+ 									is_in_home_area = yes 
+ 								} 
+ 							} 
+ 						} 
+ 					} 
+ 				} 
+ 				add_extra_state_shared_building_slots = 2 
+ 				add_building_construction = { 
+ 					type = arms_factory 
+ 					level = 2 
+ 					instant_build = yes 
+ 				} 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Welfare Sacrifices 
+		focus = { 
+		id = phi_welfaresacrifices 
+		icon = GFX_goal_generic_neutrality_focus 
+		ai_will_do = { factor = 1 } 
+ x =10 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_moreconstruction} 
+  prerequisite = { focus =phi_buildnewmilitaryfactories} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = {
+				add_ideas = phi_rahatyasam
+				} 
+ }
+ 
+ ############################################   EXPAND ARMY FOCUS   ############################################
+ #Focus for PHI_American Weapons And Philippines Mans 
+		focus = { 
+		id = phi_americanweaponsandphilippinesmans 
+		icon = GFX_focus_generic_little_entente 
+		ai_will_do = { factor = 1 } 
+ x =17 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_thenewconstitution} 
+ available = { } 
+ cost = 5  
+  available_if_capitulated = yes  
+ completion_reward = {
+ 	if = { 
+ 				limit = {  
+ 					OR = {  
+ 						has_idea = disarmed_nation 
+ 						has_idea = volunteer_only 
+ add_ideas = limited_conscription 
+ 					} 
+ 				} 
+ 				 
+ add_ideas = extensive_conscription 
+  
+ }  
+ }
+ }
+ 
+ #Focus for PHI_More Convoys, More Weapons 
+		focus = { 
+		id = phi_moreconvoysmoreweapons 
+		icon = GFX_goal_generic_construct_naval_dockyard 
+		ai_will_do = { factor = 1 } 
+ x =15 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_americanweaponsandphilippinesmans} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+					add_ideas = phi_ucuzkonvoy
+ } 
+ }
+ #Focus for PHI_US Military Training Methods 
+		focus = { 
+		id = phi_usmilitarytrainingmethods 
+		icon = GFX_focus_generic_military_academy 
+		ai_will_do = { factor = 1 } 
+ x =17 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_americanweaponsandphilippinesmans} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_ideas = phi_expandarmy
+ } 
+ }
+ 
+ #Focus for PHI_Special Forces Focus 
+		focus = { 
+		id = phi_specialforcesfocus 
+		icon = GFX_goal_generic_special_forces 
+		ai_will_do = { factor = 1 } 
+ x =13 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+add_ideas = special_forces
+ } 
+ }
+ #Focus for PHI_Training At Sea 
+		focus = { 
+		id = phi_trainingatsea 
+		icon = GFX_focus_secret_rearmament 
+		ai_will_do = { factor = 1 } 
+ x =13 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_specialforcesfocus} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ 			add_tech_bonus = { 
+ 				name = special_bonus 
+ 				bonus = 1 
+ 				uses = 1 
+ 				technology = marines 
+ 			} 
+ add_tech_bonus = { 
+ 				name = uk_amphibious_focus 
+ 				bonus = 1 
+ 				uses = 1 
+ 				category = tp_tech 
+ 				} 
+ } 
+ }
+ #Focus for PHI_General Education In The USA 
+		focus = { 
+		id = phi_generaleducationintheusa 
+		icon = GFX_focus_generic_military_mission 
+		ai_will_do = { factor = 1 } 
+ x =17 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_usmilitarytrainingmethods} 
+  prerequisite = { focus =phi_trainingatsea} 
+ cost = 20  
+  available_if_capitulated = yes
+ completion_reward = { 
+custom_effect_tooltip = phi_general1
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Joshua Ko"
+					gfx = "Portrait_Asia_Generic_navy_2"
+					traits = {
+								hill_fighter
+								organizer
+								inflexible_strategist
+								infantry_officer
+								}
+					skill = 4
+					attack_skill = 1
+					defense_skill = 4
+					planning_skill = 3
+					logistics_skill = 4
+				}
+			}
+			
+			custom_effect_tooltip = phi_general2
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Roden Rayn"
+					gfx = "Portrait_Asia_Generic_navy_1"
+					traits = {
+								offensive_doctrine
+								infantry_leader
+								organizer
+								naval_invader
+								commando
+								infantry_officer
+								trickster
+								trait_engineer
+								}
+					skill = 4
+					attack_skill = 4
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 4
+				}
+			}
+			
+			}  
+ }
+ #Focus for PHI_Analyze Enemies 
+		focus = { 
+		id = phi_analyzeenemies 
+		icon = GFX_focus_generic_cryptologic_bomb 
+		ai_will_do = { factor = 2 } 
+ x =19 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_americanweaponsandphilippinesmans} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ 				name = radar_focus 
+ 				bonus = 1 
+ 				uses = 2 
+ 				category = radar_tech 
+ 			} 
+ } 
+ }
+ #Focus for PHI_Mandatory Military Service After Treatment 
+		focus = { 
+		id = phi_mandatorymilitaryserviceaftertreatment 
+		icon = GFX_goal_generic_political_pressure 
+		ai_will_do = { factor = 1 } 
+ x =20 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_overcomingthediseasecrisis} 
+  prerequisite = { focus =phi_analyzeenemies} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+				add_war_support = 0.2
+				add_ideas = phi_hastaadam
+						} 
+	}
+ #Focus for PHI_Use Lab To Develop Weapons. 
+		focus = { 
+		id = phi_uselabtodevelopweapons 
+		icon = GFX_focus_research 
+		ai_will_do = { factor = 1 } 
+ x =21 
+ y =8 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_mandatorymilitaryserviceaftertreatment} 
+ available = { >1940 } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_research_slot = 1 
+ } 
+ }
+ #Focus for PHI_Philippines Forts 
+		focus = { 
+		id = phi_philippinesforts 
+		icon = GFX_goal_generic_construct_military 
+		ai_will_do = { factor = 1 } 
+ x =16 
+ y =8 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_generaleducationintheusa} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ 623 = { 
+ 				add_building_construction = { 
+ 					type = coastal_bunker 
+ 					level = 1 
+ 					province = 12213 
+ 					instant_build = yes 
+ 				} 
+ 				add_building_construction = { 
+ 					type = coastal_bunker 
+ 					level = 1 
+ 					province = 1415 
+ 					instant_build = yes 
+ 				} 
+ 				add_building_construction = { 
+ 					type = bunker 
+ 					level = 1 
+ 					province = 12213 
+ 					instant_build = yes 
+ 				} 
+ 				add_building_construction = { 
+ 					type = bunker 
+ 					level = 1 
+ 					province = 1415 
+ 					instant_build = yes 
+ 				} 
+ } 
+  
+ 327 = { 
+ 				add_building_construction = { 
+ 					type = coastal_bunker 
+ 					level = 1 
+ 					province = 10265 
+ 					instant_build = yes 
+ 				} 
+ 				add_building_construction = { 
+ 					type = coastal_bunker 
+ 					level = 1 
+ 					province = 1221 
+ 					instant_build = yes 
+ 				} 
+ 				add_building_construction = { 
+ 					type = bunker 
+ 					level = 1 
+ 					province = 12213 
+ 					instant_build = yes 
+ 				} 
+ 				add_building_construction = { 
+ 					type = bunker 
+ 					level = 1 
+ 					province = 1415 
+ 					instant_build = yes 
+ 				} 
+ } 
+  
+ 628 = { 
+ 				add_building_construction = { 
+ 					type = coastal_bunker 
+ 					level = 1 
+ 					province = 12118 
+ 					instant_build = yes 
+ 				} 
+ 				add_building_construction = { 
+ 					type = bunker 
+ 					level = 1 
+ 					province = 12118 
+ 					instant_build = yes 
+ 				} 
+ } 
+  
+ 627 = { 
+ 				add_building_construction = { 
+ 					type = coastal_bunker 
+ 					level = 1 
+ 					province = 4241 
+ 					instant_build = yes 
+ 				} 
+ 				add_building_construction = { 
+ 					type = bunker 
+ 					level = 1 
+ 					province = 4241 
+ 					instant_build = yes 
+ 				} 
+ } 
+ } 
+ }
+ #Focus for PHI_More Marines 
+		focus = { 
+		id = phi_moremarines 
+		icon = GFX_goal_generic_amphibious_assault 
+		ai_will_do = { factor = 1 } 
+ x =18 
+ y =8 
+ mutually_exclusive = { } 
+ prerequisite = { focus = phi_generaleducationintheusa} 
+  prerequisite = { focus =phi_analyzeenemies} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_ideas = phi_kalifiyeasker
+ } 
+ }
+ #End of focuses 
+}

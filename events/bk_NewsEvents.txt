@@ -1,0 +1,25 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = news
+
+# Atlantic Charter
+news_event = {
+	id = bk_news.421
+	title = bk_news.421.t
+	desc = bk_news.421.d
+	picture = GFX_news_event_generic_usa_treaty
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = atlantic_charter
+	}
+	
+	option = {
+		name = bk_news.421.a
+	}
+}

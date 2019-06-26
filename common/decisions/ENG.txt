@@ -1,0 +1,4025 @@
+ENG_concessions_to_the_trade_unions = {
+
+	ENG_trade_unions_demand_minister_appointment_1 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_1
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_1
+			add_ideas = ENG_random_communist_minister_1 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+    
+	SOV_puppet_dutcheastindied = {
+
+        icon = generic_army_support
+
+        visible = {
+            tag = ENG
+        }
+
+        fire_only_once = yes
+
+        cost = 0
+
+        available = {
+            date > 1940.1.1
+            tag = ENG
+        }
+
+        complete_effect = {
+            puppet = INS
+            INS = {
+                set_cosmetic_tag = INS_neutrality
+            }
+        }
+    }	
+
+	ENG_trade_unions_demand_minister_appointment_2 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_2
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_2
+			add_ideas = ENG_random_communist_minister_2 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_3 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_3
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_3
+			add_ideas = ENG_random_communist_minister_3 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_4 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_4
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_4
+			add_ideas = ENG_random_communist_minister_4 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_5 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_5
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_5
+			add_ideas = ENG_random_communist_minister_5 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_6 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_6
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_6
+			add_ideas = ENG_random_communist_minister_6 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_7 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_7
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_7
+			add_ideas = ENG_random_communist_minister_7 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_8 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_8
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_8
+			add_ideas = ENG_random_communist_minister_8 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_9 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_9
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_9
+			add_ideas = ENG_random_communist_minister_9 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_10 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_10
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_10
+			add_ideas = ENG_random_communist_minister_10 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_11 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_11
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_11
+			add_ideas = ENG_random_communist_minister_11 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_12 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_12
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_12
+			add_ideas = ENG_random_communist_minister_12 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_13 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_13
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_13
+			add_ideas = ENG_random_communist_minister_13 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_14 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_14
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_14
+			add_ideas = ENG_random_communist_minister_14 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_15 = {
+
+		name = ENG_trade_unions_demand_minister_appointment_decision
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minister_appointment_15
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minister_appointment_15
+			add_ideas = ENG_random_communist_minister_15 #intentionally not given loc so it can be random 
+			remove_mission = ENG_trade_unions_demand_minister_appointment_mission
+			hidden_effect = {
+				random_list = {
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+				set_country_flag = ENG_trade_unions_demand_minister_appointment
+				custom_effect_tooltip = ENG_trade_unions_demands_tt
+			}
+			ENG_request_trade_union_support_cost_level_down = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minister_appointment_mission = {
+
+		icon = eng_trade_unions_demand
+		
+		available = {
+			has_country_flag = ENG_trade_unions_demand_minister_appointment
+		}
+
+		days_mission_timeout = 200
+
+		fire_only_once = no
+
+		activation = {
+			tag = ENG
+			OR = {
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_1
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_2
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_3
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_4
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_5
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_6
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_7
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_8
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_9
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_10
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_11
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_12
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_13
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_14
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_15
+			}
+			NOT = { has_country_flag = ENG_trade_unions_demand_minister_appointment }
+		}
+
+		visible = {
+			tag = ENG
+			OR = {
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_1
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_2
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_3
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_4
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_5
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_6
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_7
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_8
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_9
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_10
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_11
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_12
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_13
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_14
+				has_country_flag = ENG_trade_unions_demand_minister_appointment_15
+			}
+			NOT = { has_country_flag = ENG_trade_unions_demand_minister_appointment }
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			add_political_power = -25
+			add_stability = -0.03
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+	}
+
+	ENG_trade_unions_demand_legislation_amendment = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_legislation_amendment
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_legislation_amendment_done_flag
+			custom_effect_tooltip = ENG_trade_unions_demands_tt
+			ENG_request_trade_union_support_cost_level_down = yes
+			remove_mission = ENG_trade_unions_demand_legislation_amendment_mission
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 0 has_country_flag = ENG_trade_unions_demand_minister_appointment
+						}
+						random_list = {
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_1 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_2 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_3 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_4 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_5 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_6 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_7 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_8 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_9 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_10 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_11 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_12 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_13 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_14 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_15 }
+						}
+						activate_mission = ENG_trade_unions_demand_minister_appointment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_legislation_amendment_mission = {
+
+		icon = eng_trade_unions_demand
+		
+		available = {
+			has_country_flag = ENG_trade_unions_demand_legislation_amendment_done_flag
+		}
+
+		days_mission_timeout = 300
+
+		fire_only_once = no
+
+		activation = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_legislation_amendment
+			NOT = { has_country_flag = ENG_trade_unions_demand_legislation_amendment_done_flag }
+		}
+
+		visible = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_legislation_amendment
+			NOT = { has_country_flag = ENG_trade_unions_demand_legislation_amendment_done_flag }
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			add_political_power = -25
+			add_stability = -0.03
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+	}
+
+	ENG_trade_unions_demand_conscription_limitations = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_conscription_limitations
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_conscription_limitations_done_flag
+			custom_effect_tooltip = ENG_trade_unions_demand_conscription_limitations_tt
+			if = {
+				limit = {
+					has_idea = volunteer_only
+				}
+				custom_effect_tooltip = ENG_trade_unions_demand_conscription_limitations_tt2
+			}
+			if = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				remove_ideas = limited_conscription
+				add_ideas = volunteer_only
+			}
+			if = {
+				limit = {
+					has_idea = extensive_conscription
+				}
+				remove_ideas = extensive_conscription
+				add_ideas = limited_conscription
+			}
+			if = {
+				limit = {
+					has_idea = service_by_requirement
+				}
+				remove_ideas = service_by_requirement
+				add_ideas = extensive_conscription
+			}
+			custom_effect_tooltip = ENG_trade_unions_demands_tt
+			ENG_request_trade_union_support_cost_level_down = yes
+			remove_mission = ENG_trade_unions_demand_conscription_limitations_mission
+			hidden_effect = {
+				set_country_flag = { flag = ENG_cannot_increase_conscription_law value = 1 days = 365 }
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 0 has_country_flag = ENG_trade_unions_demand_minister_appointment
+						}
+						random_list = {
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_1 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_2 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_3 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_4 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_5 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_6 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_7 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_8 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_9 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_10 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_11 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_12 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_13 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_14 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_15 }
+						}
+						activate_mission = ENG_trade_unions_demand_minister_appointment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_conscription_limitations_mission = {
+
+		icon = eng_trade_unions_demand
+		
+		available = {
+			has_country_flag = ENG_trade_unions_demand_conscription_limitations_done_flag
+		}
+
+		days_mission_timeout = 150
+
+		fire_only_once = no
+
+		activation = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_conscription_limitations
+			NOT = { has_country_flag = ENG_trade_unions_demand_conscription_limitations_done_flag }
+		}
+
+		visible = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_conscription_limitations
+			NOT = { has_country_flag = ENG_trade_unions_demand_conscription_limitations_done_flag }
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			add_political_power = -25
+			add_stability = -0.03
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+	}
+
+	ENG_trade_unions_demand_workplace_safety_legislation = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation_done_flag
+			if = {
+				limit = {
+					has_idea = ENG_factory_safety_regulations_2
+				}
+				remove_ideas =  ENG_factory_safety_regulations_2
+				add_timed_idea = { idea = ENG_factory_safety_regulations_3 days = 365 }
+			}
+			else_if = {
+				limit = {
+					has_idea = ENG_factory_safety_regulations_1
+				}
+				remove_ideas =  ENG_factory_safety_regulations_1
+				add_timed_idea = { idea = ENG_factory_safety_regulations_2 days = 365 }
+			}
+			else_if = {
+				limit = {
+					NOT = { has_idea = ENG_factory_safety_regulations_1 }
+					NOT = { has_idea = ENG_factory_safety_regulations_2 }
+				}
+				add_timed_idea = { idea = ENG_factory_safety_regulations_1 days = 365 }
+			}
+			custom_effect_tooltip = ENG_trade_unions_demands_tt
+			ENG_request_trade_union_support_cost_level_down = yes
+			remove_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 0 has_country_flag = ENG_trade_unions_demand_minister_appointment
+						}
+						random_list = {
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_1 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_2 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_3 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_4 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_5 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_6 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_7 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_8 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_9 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_10 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_11 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_12 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_13 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_14 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_15 }
+						}
+						activate_mission = ENG_trade_unions_demand_minister_appointment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_workplace_safety_legislation_mission = {
+
+		icon = eng_trade_unions_demand
+		
+		available = {
+			has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation_done_flag
+		}
+
+		days_mission_timeout = 150
+
+		fire_only_once = no
+
+		activation = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+			NOT = { has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation_done_flag }
+		}
+
+		visible = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+			NOT = { has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation_done_flag }
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			add_political_power = -25
+			add_stability = -0.03
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+	}
+
+	ENG_trade_unions_demand_increase_in_paid_leave = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave_done_flag
+			if = {
+				limit = {
+					has_idea = ENG_factory_safety_regulations_2
+				}
+				remove_ideas =  ENG_factory_safety_regulations_2
+				add_timed_idea = { idea = ENG_factory_safety_regulations_3 days = 365 }
+			}
+			else_if = {
+				limit = {
+					has_idea = ENG_factory_safety_regulations_1
+				}
+				remove_ideas =  ENG_factory_safety_regulations_1
+				add_timed_idea = { idea = ENG_factory_safety_regulations_2 days = 365 }
+			}
+			else_if = {
+				limit = {
+					NOT = { has_idea = ENG_factory_safety_regulations_1 }
+					NOT = { has_idea = ENG_factory_safety_regulations_2 }
+				}
+				add_timed_idea = { idea = ENG_factory_safety_regulations_1 days = 365 }
+			}
+			custom_effect_tooltip = ENG_trade_unions_demands_tt
+			ENG_request_trade_union_support_cost_level_down = yes
+			remove_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 0 has_country_flag = ENG_trade_unions_demand_minister_appointment
+						}
+						random_list = {
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_1 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_2 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_3 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_4 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_5 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_6 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_7 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_8 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_9 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_10 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_11 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_12 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_13 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_14 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_15 }
+						}
+						activate_mission = ENG_trade_unions_demand_minister_appointment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_increase_in_paid_leave_mission = {
+
+		icon = eng_trade_unions_demand
+		
+		available = {
+			has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave_done_flag
+		}
+
+		days_mission_timeout = 150
+
+		fire_only_once = no
+
+		activation = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+			NOT = { has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave_done_flag }
+		}
+
+		visible = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+			NOT = { has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave_done_flag }
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			add_political_power = -25
+			add_stability = -0.03
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+	}
+
+	ENG_trade_unions_demand_minimum_pay_increase = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_minimum_pay_increase_done_flag
+			if = {
+				limit = {
+					has_idea = ENG_factory_safety_regulations_2
+				}
+				remove_ideas =  ENG_factory_safety_regulations_2
+				add_timed_idea = { idea = ENG_factory_safety_regulations_3 days = 365 }
+			}
+			else_if = {
+				limit = {
+					has_idea = ENG_factory_safety_regulations_1
+				}
+				remove_ideas =  ENG_factory_safety_regulations_1
+				add_timed_idea = { idea = ENG_factory_safety_regulations_2 days = 365 }
+			}
+			else_if = {
+				limit = {
+					NOT = { has_idea = ENG_factory_safety_regulations_1 }
+					NOT = { has_idea = ENG_factory_safety_regulations_2 }
+				}
+				add_timed_idea = { idea = ENG_factory_safety_regulations_1 days = 365 }
+			}
+			custom_effect_tooltip = ENG_trade_unions_demands_tt
+			ENG_request_trade_union_support_cost_level_down = yes
+			remove_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 0 has_country_flag = ENG_trade_unions_demand_minister_appointment
+						}
+						random_list = {
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_1 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_2 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_3 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_4 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_5 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_6 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_7 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_8 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_9 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_10 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_11 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_12 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_13 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_14 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_15 }
+						}
+						activate_mission = ENG_trade_unions_demand_minister_appointment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_minimum_pay_increase_mission = {
+
+		icon = eng_trade_unions_demand
+		
+		available = {
+			has_country_flag = ENG_trade_unions_demand_minimum_pay_increase_done_flag
+		}
+
+		days_mission_timeout = 150
+
+		fire_only_once = no
+
+		activation = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+			NOT = { has_country_flag = ENG_trade_unions_demand_minimum_pay_increase_done_flag }
+		}
+
+		visible = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+			NOT = { has_country_flag = ENG_trade_unions_demand_minimum_pay_increase_done_flag }
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			add_political_power = -25
+			add_stability = -0.03
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+	}
+
+	ENG_trade_unions_demand_construction_safety_legislation = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_construction_safety_legislation_done_flag
+			add_timed_idea = { idea = ENG_construction_safety_regulations days = 365 }
+			custom_effect_tooltip = ENG_trade_unions_demands_tt
+			ENG_request_trade_union_support_cost_level_down = yes
+			remove_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 0 has_country_flag = ENG_trade_unions_demand_minister_appointment
+						}
+						random_list = {
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_1 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_2 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_3 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_4 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_5 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_6 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_7 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_8 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_9 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_10 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_11 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_12 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_13 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_14 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_15 }
+						}
+						activate_mission = ENG_trade_unions_demand_minister_appointment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						}
+						set_country_flag = ENG_trade_unions_demand_mandatory_union_days
+						activate_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_construction_safety_legislation_mission = {
+
+		icon = eng_trade_unions_demand
+		
+		available = {
+			has_country_flag = ENG_trade_unions_demand_construction_safety_legislation_done_flag
+		}
+
+		days_mission_timeout = 150
+
+		fire_only_once = no
+
+		activation = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+			NOT = { has_country_flag = ENG_trade_unions_demand_construction_safety_legislation_done_flag }
+		}
+
+		visible = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+			NOT = { has_country_flag = ENG_trade_unions_demand_construction_safety_legislation_done_flag }
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			add_political_power = -25
+			add_stability = -0.03
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+	}
+
+	ENG_trade_unions_demand_mandatory_union_days = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+			has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+		}
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			set_country_flag = { flag = ENG_trade_unions_demand_timer value = 1 days = 30 }
+			set_country_flag = ENG_trade_unions_demand_mandatory_union_days_done_flag
+			add_timed_idea = { idea = ENG_mandatory_union_days days = 365 }
+			custom_effect_tooltip = ENG_trade_unions_demands_tt
+			ENG_request_trade_union_support_cost_level_down = yes
+			remove_mission = ENG_trade_unions_demand_mandatory_union_days_mission
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 0 has_country_flag = ENG_trade_unions_demand_minister_appointment
+						}
+						random_list = {
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_1 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_2 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_3 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_4 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_5 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_6 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_7 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_8 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_9 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_10 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_11 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_12 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_13 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_14 }
+							6 = { set_country_flag = ENG_trade_unions_demand_minister_appointment_15 }
+						}
+						activate_mission = ENG_trade_unions_demand_minister_appointment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_legislation_amendment
+						}
+						set_country_flag = ENG_trade_unions_demand_legislation_amendment
+						activate_mission = ENG_trade_unions_demand_legislation_amendment_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_conscription_limitations
+						}
+						set_country_flag = ENG_trade_unions_demand_conscription_limitations
+						activate_mission = ENG_trade_unions_demand_conscription_limitations_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_workplace_safety_legislation
+						activate_mission = ENG_trade_unions_demand_workplace_safety_legislation_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						}
+						set_country_flag = ENG_trade_unions_demand_increase_in_paid_leave
+						activate_mission = ENG_trade_unions_demand_increase_in_paid_leave_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						}
+						set_country_flag = ENG_trade_unions_demand_minimum_pay_increase
+						activate_mission = ENG_trade_unions_demand_minimum_pay_increase_mission
+					}
+					10 = { 
+						modifier = {
+							factor = 0
+							has_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						}
+						set_country_flag = ENG_trade_unions_demand_construction_safety_legislation
+						activate_mission = ENG_trade_unions_demand_construction_safety_legislation_mission
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_trade_unions_demand_mandatory_union_days_mission = {
+
+		icon = eng_trade_unions_demand
+		
+		available = {
+			has_country_flag = ENG_trade_unions_demand_mandatory_union_days_done_flag
+		}
+
+		days_mission_timeout = 200
+
+		fire_only_once = no
+
+		activation = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+			NOT = { has_country_flag = ENG_trade_unions_demand_mandatory_union_days_done_flag }
+		}
+
+		visible = {
+			tag = ENG
+			has_country_flag = ENG_trade_unions_demand_mandatory_union_days
+			NOT = { has_country_flag = ENG_trade_unions_demand_mandatory_union_days_done_flag }
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			add_political_power = -25
+			add_stability = -0.03
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+	}
+
+	ENG_trade_unions_demand_referendum = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			communism > 0.5
+			has_country_flag = ENG_trade_unions_demand_minister_appointment
+			has_country_flag = ENG_trade_unions_demand_legislation_amendment_done_flag
+			has_country_flag = ENG_trade_unions_demand_conscription_limitations_done_flag
+			has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation_done_flag
+			has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave_done_flag
+			has_country_flag = ENG_trade_unions_demand_minimum_pay_increase_done_flag
+			has_country_flag = ENG_trade_unions_demand_construction_safety_legislation_done_flag
+			has_country_flag = ENG_trade_unions_demand_mandatory_union_days_done_flag
+			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_government = communism }
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = ENG_factory_safety_regulations_1
+				}
+				remove_ideas = ENG_factory_safety_regulations_1
+			}
+			if = {
+				limit = {
+					has_idea = ENG_factory_safety_regulations_2
+				}
+				remove_ideas = ENG_factory_safety_regulations_2
+			}
+			if = {
+				limit = {
+					has_idea = ENG_factory_safety_regulations_3
+				}
+				remove_ideas = ENG_factory_safety_regulations_3
+			}
+			if = {
+				limit = {
+					has_idea = ENG_construction_safety_regulations
+				}
+				remove_ideas = ENG_construction_safety_regulations
+			}
+			if = {
+				limit = {
+					has_idea = ENG_mandatory_union_days
+				}
+				remove_ideas = ENG_mandatory_union_days
+			}
+			if = {
+				limit = {
+					has_country_flag = ENG_trade_unions_demand_conscription_limitations
+				}
+				hidden_effect = { clr_country_flag = ENG_trade_unions_demand_conscription_limitations }
+				custom_effect_tooltip = ENG_trade_unions_demand_referendum_tt
+			}
+			set_country_flag = ENG_switched_to_communism_civil_war_flag
+			set_country_flag = { flag = ENG_switched_to_communism_civil_war_timer_flag value = 1 days = 730 }
+			set_country_flag = { flag = ENG_switched_to_fascism_communism_dominions_timer_flag value = 1 days = 180 }
+			country_event = { id = political.19 }
+			ENG_request_trade_union_support_cost_level_down = yes
+			custom_effect_tooltip = ENG_concessions_to_the_trade_unions_tt_2
+			activate_mission = ENG_expected_decolonization
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ENG_trade_unions_demand_referendum_mission = {
+
+		icon = eng_trade_unions_demand
+		
+		available = {
+			has_government = communism
+		}
+
+		days_mission_timeout = 200
+
+		fire_only_once = no
+
+		activation = {
+			tag = ENG
+			communism > 0.5
+			has_country_flag = ENG_trade_unions_demand_minister_appointment
+			has_country_flag = ENG_trade_unions_demand_legislation_amendment_done_flag
+			has_country_flag = ENG_trade_unions_demand_conscription_limitations_done_flag
+			has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation_done_flag
+			has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave_done_flag
+			has_country_flag = ENG_trade_unions_demand_minimum_pay_increase_done_flag
+			has_country_flag = ENG_trade_unions_demand_construction_safety_legislation_done_flag
+			has_country_flag = ENG_trade_unions_demand_mandatory_union_days_done_flag
+			NOT = { has_government = communism }
+		}
+
+		visible = {
+			tag = ENG
+			communism > 0.5
+			has_country_flag = ENG_trade_unions_demand_minister_appointment
+			has_country_flag = ENG_trade_unions_demand_legislation_amendment_done_flag
+			has_country_flag = ENG_trade_unions_demand_conscription_limitations_done_flag
+			has_country_flag = ENG_trade_unions_demand_workplace_safety_legislation_done_flag
+			has_country_flag = ENG_trade_unions_demand_increase_in_paid_leave_done_flag
+			has_country_flag = ENG_trade_unions_demand_minimum_pay_increase_done_flag
+			has_country_flag = ENG_trade_unions_demand_construction_safety_legislation_done_flag
+			has_country_flag = ENG_trade_unions_demand_mandatory_union_days_done_flag
+			NOT = { has_government = communism }
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			add_political_power = -25
+			add_stability = -0.03
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+	}
+
+	ENG_request_trade_union_support_for_new_factories = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+		}
+
+		cost = ENG_trade_unions_support_50_cost?50
+
+		fire_only_once = no
+
+		visible = {
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_stability < 0.9
+				}
+				add_stability = 0.05
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					NOT = { has_state_flag = ENG_trade_unions_demand_referendum_1AF }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ENG_trade_unions_demand_referendum_1AF
+			}
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ENG_request_trade_union_factory_worker_support = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_idea = ENG_trade_union_factory_worker_support }
+		}
+
+		cost = ENG_trade_unions_support_75_cost?75
+
+		fire_only_once = no
+
+		visible = {
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_stability < 0.9
+				}
+				add_stability = 0.05
+			}
+			add_timed_idea = { idea = ENG_trade_union_factory_worker_support days = 180 }
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ENG_request_trade_union_dockyard_worker_support = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_idea = ENG_trade_union_dockyard_worker_support }
+		}
+
+		cost = ENG_trade_unions_support_75_cost?75
+
+		fire_only_once = no
+
+		visible = {
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_stability < 0.9
+				}
+				add_stability = 0.05
+			}
+			add_timed_idea = { idea = ENG_trade_union_dockyard_worker_support days = 180 }
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ENG_request_trade_union_construction_worker_support = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_idea = ENG_trade_union_construction_worker_support }
+		}
+
+		cost = ENG_trade_unions_support_75_cost?75
+
+		fire_only_once = no
+
+		visible = {
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_stability < 0.9
+				}
+				add_stability = 0.05
+			}
+			add_timed_idea = { idea = ENG_trade_union_construction_worker_support days = 180 }
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ENG_request_trade_union_war_propaganda_support = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_idea = ENG_trade_union_war_propaganda_support }
+		}
+
+		cost = ENG_trade_unions_support_75_cost?75
+
+		fire_only_once = no
+
+		visible = {
+			tag = ENG
+			has_completed_focus = ENG_concessions_to_the_trade_unions
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_stability < 0.9
+				}
+				add_stability = 0.05
+			}
+			add_timed_idea = { idea = ENG_trade_union_war_propaganda_support days = 180 }
+			ENG_request_trade_union_support_cost_level_up = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+ENG_imperial_conference_decision = {
+	
+	ENG_imperial_conference_decision = {
+
+		icon = generic_political_discourse
+		
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 60
+
+		fire_only_once = yes
+
+		activation = {
+			tag = ENG
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		visible = {
+			tag = ENG
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		cancel_if_not_visible = no
+
+		is_good = yes
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = imperial_conference_ends_tt
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							is_subject_of = ENG
+							tag = CAN
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = SAF
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = RAJ
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = AST
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = NZL
+						}
+					}
+				}
+				remove_opinion_modifier = { target = ENG modifier = ENG_imperial_conference_opinion }
+				remove_opinion_modifier = { target = ENG modifier = ENG_imperial_conference_approved_resolution }
+			}
+		}
+	}
+	
+	ENG_discuss_imperial_defense = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.83 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_discuss_imperial_trade = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.87 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_discuss_imperial_economy = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.91 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+}
+
+political_actions = {
+
+	#ENG_host_CZE_exile_government = {
+	#
+	#	icon = generic
+	#
+	#	allowed = {
+	#		has_dlc = "Man the Guns"
+	#		original_tag = ENG
+	#		
+	#	}
+	#	available = {
+	#		has_government = democratic
+	#	}
+	#	cost = 50
+	#	fire_only_once = yes
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#
+	#	visible = {
+	#		CZE = {
+	#			exists = no
+	#		}
+	#	
+	#		CZE = {
+	#			is_government_in_exile = no
+	#		}
+	#	
+	#		9 = { CONTROLLER = { has_war_with = ROOT } }
+	#	}
+	#	complete_effect = {
+	#		CZE = {
+	#			become_exiled_in = {
+	#				target = ROOT
+	#				legitimacy = 50
+	#			}
+	#		}
+	#	}
+	#}
+	hold_blood_toil_tears_sweat_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			has_war_with = GER
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = blood_toil_tears_sweat_speech }
+			}
+			set_country_flag = blood_toil_tears_sweat_speech
+		}
+
+		ai_will_do = {
+			factor = 100 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_fight_on_the_beaches_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			has_war_with = GER
+			is_in_faction_with = FRA
+			FRA = {
+				surrender_progress > 0.2
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = blood_toil_tears_sweat_speech
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = fight_on_the_beaches_speech }
+			}
+			set_country_flag = fight_on_the_beaches_speech
+		}
+
+		ai_will_do = {
+			factor = 100 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_this_was_their_finest_hour_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			has_war_with = GER
+			is_in_faction_with = FRA
+			FRA = { has_capitulated = yes }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = fight_on_the_beaches_speech
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = this_was_their_finest_hour_speech }
+			}
+			set_country_flag = this_was_their_finest_hour_speech
+		}
+
+		ai_will_do = {
+			factor = 100 #Gotta allow the Americans to help
+		}
+	}
+
+	macdonald_proposal = {
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			IRE = { exists = yes }
+			NOT = { is_in_faction_with = IRE }
+			FRA = { has_capitulated = yes }
+			is_in_faction_with = FRA
+		}
+
+		cost = 50
+		
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			IRE = { exists = yes }
+		}
+		
+		complete_effect = {
+			IRE = { country_event = { id = wtt_britain.24 } }
+			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ENG_request_azores_lease = {
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			has_war = yes
+			has_government = democratic
+			POR = {
+				has_full_control_of_state = 698
+				OR = {
+					has_government = ROOT
+					has_government = neutrality
+				}
+			}
+			POR = { is_in_faction = no }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		visible = {
+			has_war = yes
+			POR = {
+				has_full_control_of_state = 698
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		
+		complete_effect = {
+			POR = { country_event = wtt_britain_lease_azores.1 }
+		}
+	}
+
+	ENG_abdication_crisis = { # timer for the player to see when the event chain ends
+
+		icon = eng_abdication_crisis
+		
+		available = {
+			has_country_flag = ENG_abdication_crisis_changed_mind
+		}
+
+		days_mission_timeout = 200
+
+		fire_only_once = yes
+
+		activation = {
+			tag = ENG
+			OR = {
+				has_country_flag = ENG_abdication_crisis_normal_marriage
+				has_country_flag = ENG_abdication_crisis_morganatic_marriage
+			}
+		}
+
+		visible = {
+			tag = ENG
+			OR = {
+				has_country_flag = ENG_abdication_crisis_normal_marriage
+				has_country_flag = ENG_abdication_crisis_morganatic_marriage
+			}
+			NOT = { has_country_flag = edward_viii_married_wallis_simpson }
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = yes
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			country_event = { id = mtg_britain.5 }
+		}
+	}
+
+	ENG_britain_demands_treaty_compliance = { # ENG demanding scuttling of ships to maintain Washington Naval Treaty
+
+		icon = generic_naval
+		
+		available = {
+			if = {
+				limit = {
+					original_tag = USA
+				}
+				custom_trigger_tooltip = {
+					tooltip = ENG_britain_demands_treaty_compliance_tt_1
+					naval_strength_comparison = {
+						other = ENG
+						ratio < 1.01
+						sub_unit_def_weights = {
+							carrier = 1
+							battleship = 1
+							battle_cruiser = 1
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					original_tag = JAP
+				}
+				custom_trigger_tooltip = {
+					tooltip = ENG_britain_demands_treaty_compliance_tt_2
+					naval_strength_comparison = {
+						other = ENG
+						ratio < 0.66
+						sub_unit_def_weights = {
+							carrier = 1
+							battleship = 1
+							battle_cruiser = 1
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { original_tag = USA }
+					NOT = { original_tag = JAP }
+				}
+				custom_trigger_tooltip = {
+					tooltip = ENG_britain_demands_treaty_compliance_tt_3
+					naval_strength_comparison = {
+						other = ENG
+						ratio < 0.36
+						sub_unit_def_weights = {
+							carrier = 1
+							battleship = 1
+							battle_cruiser = 1
+						}
+					}
+				}
+			}
+		}
+
+		days_mission_timeout = 60
+
+		fire_only_once = no
+
+		activation = {
+			has_country_flag = ENG_demanding_ship_reduction_flag
+		}
+
+		visible = {
+			has_country_flag = ENG_demanding_ship_reduction_flag
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		complete_effect = {
+			clr_country_flag = ENG_demanding_ship_reduction_flag
+			random_country = {
+				limit = {
+					original_tag = ENG
+					has_completed_focus = ENG_enforce_the_naval_treaties
+				}
+				country_event = { id = mtg_britain.107 }
+			}
+		}
+
+		timeout_effect = {
+			clr_country_flag = ENG_demanding_ship_reduction_flag
+			random_country = {
+				limit = {
+					original_tag = ENG
+					has_completed_focus = ENG_enforce_the_naval_treaties
+				}
+				country_event = { id = mtg_britain.108 }
+			}
+			effect_tooltip = {
+				ENG = {
+					create_wargoal = {
+						target = ROOT
+						type = puppet_wargoal_focus
+						expire = 0
+					}
+				}
+			}
+		}
+	}
+}
+
+operations = {
+
+	operation_fork = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			ICE = { exists = yes }
+			NOR = { has_capitulated = yes }
+			is_in_faction_with = NOR
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			tag = ENG
+			has_war_with = GER
+			ICE = { exists = yes }
+			NOT = { ICE = { is_in_faction_with = ROOT } }
+		}
+		
+		complete_effect = {
+			declare_war_on = { target = ICE type = puppet_wargoal_focus }
+			add_popularity = { ideology = democratic popularity = -0.05 }
+		}
+	}
+	
+	invade_ireland = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			IRE = { exists = yes }
+			NOT = { is_in_faction_with = IRE }
+			FRA = { has_capitulated = yes }
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 100
+				any_enemy_country = {
+					has_attache_from = IRE
+				}
+			}
+			modifier = {
+				add = 1
+				has_opinion = { target = IRE value < -50 }
+			}
+			modifier = {
+				add = 1
+				IRE = { has_added_tension_amount > 0.05 }
+			}
+		}
+		
+		visible = {
+			tag = ENG
+			has_war_with = GER
+			IRE = { exists = yes }
+		}
+		
+		complete_effect = {
+			add_state_claim = 113
+			add_state_claim = 134
+			add_state_claim = 135
+			declare_war_on = { target = IRE type = annex_everything }
+			add_popularity = { ideology = democratic popularity = -0.03 }
+		}
+	}
+
+	mers_el_kebir_raid = {
+
+		icon = generic_naval
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			has_government = democratic
+			has_war_with = GER
+			any_country = {
+				original_tag = FRA
+				has_government = fascism
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			OR = {
+				AND = {
+					is_in_faction_with = FRA
+					FRA = { surrender_progress > 0.2 }
+				}
+				any_country = {
+					original_tag = FRA
+					has_government = fascism
+				}
+			}
+		}
+		
+		complete_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = FRA
+					has_government = fascism
+				}
+				country_event = { id = wtt_britain.25 hours = 5 }
+			}
+		}
+	}
+}
+
+ENG_enforce_the_naval_treaties = {
+
+	ENG_demand_treaty_compliance = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_navy_size = {
+			    size > 14
+				archetype = ship_hull_heavy
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = USA
+					}
+				}
+				FROM = {
+					custom_trigger_tooltip = {
+						tooltip = ENG_demand_treaty_compliance_tt2
+						naval_strength_comparison = {
+							other = ENG
+							ratio > 1
+							sub_unit_def_weights = {
+								carrier = 1
+								battleship = 1
+								battle_cruiser = 1
+							}
+						}
+					}
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { has_war_with = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = JAP
+					}
+				}
+				FROM = {
+					custom_trigger_tooltip = {
+						tooltip = ENG_demand_treaty_compliance_tt3
+						naval_strength_comparison = {
+							other = ENG
+							ratio > 0.65
+							sub_unit_def_weights = {
+								carrier = 1
+								battleship = 1
+								battle_cruiser = 1
+							}
+						}
+					}
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { has_war_with = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						NOT = { original_tag = USA }
+						NOT = { original_tag = JAP }
+					}
+				}
+				FROM = {
+					custom_trigger_tooltip = {
+						tooltip = ENG_demand_treaty_compliance_tt4
+						naval_strength_comparison = {
+							other = ENG
+							ratio > 0.35
+							sub_unit_def_weights = {
+								carrier = 1
+								battleship = 1
+								battle_cruiser = 1
+							}
+						}
+					}
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { has_war_with = ROOT }
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					AND = {
+						original_tag = USA
+						naval_strength_comparison = {
+							other = ENG
+							ratio > 0.8
+							sub_unit_def_weights = {
+								carrier = 1
+								battleship = 1
+								battle_cruiser = 1
+							}
+						}
+						NOT = { is_in_faction_with = ROOT }
+						NOT = { has_war_with = ROOT }
+					}
+					AND = {
+						original_tag = JAP
+						naval_strength_comparison = {
+							other = ENG
+							ratio > 0.5
+							sub_unit_def_weights = {
+								carrier = 1
+								battleship = 1
+								battle_cruiser = 1
+							}
+						}
+						NOT = { is_in_faction_with = ROOT }
+						NOT = { has_war_with = ROOT }
+					}
+					AND = {
+						NOT = { original_tag = USA }
+						NOT = { original_tag = JAP }
+						naval_strength_comparison = {
+							other = ENG
+							ratio > 0.2
+							sub_unit_def_weights = {
+								carrier = 1
+								battleship = 1
+								battle_cruiser = 1
+							}
+						}
+						NOT = { is_in_faction_with = ROOT }
+						NOT = { has_war_with = ROOT }
+					}
+				}
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+			original_tag = ENG
+			has_completed_focus = ENG_enforce_the_naval_treaties
+			FROM = {
+				OR = {
+					AND = {
+						original_tag = USA
+						naval_strength_comparison = {
+							other = ENG
+							ratio > 0.8
+							sub_unit_def_weights = {
+								carrier = 1
+								battleship = 1
+								battle_cruiser = 1
+							}
+						}
+						NOT = { is_in_faction_with = ROOT }
+						NOT = { has_war_with = ROOT }
+					}
+					AND = {
+						original_tag = JAP
+						naval_strength_comparison = {
+							other = ENG
+							ratio > 0.5
+							sub_unit_def_weights = {
+								carrier = 1
+								battleship = 1
+								battle_cruiser = 1
+							}
+						}
+						NOT = { is_in_faction_with = ROOT }
+						NOT = { has_war_with = ROOT }
+					}
+					AND = {
+						NOT = { original_tag = USA }
+						NOT = { original_tag = JAP }
+						naval_strength_comparison = {
+							other = ENG
+							ratio > 0.2
+							sub_unit_def_weights = {
+								carrier = 1
+								battleship = 1
+								battle_cruiser = 1
+							}
+						}
+						NOT = { is_in_faction_with = ROOT }
+						NOT = { has_war_with = ROOT }
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				set_country_flag = ENG_demanding_ship_reduction_flag
+				activate_mission = ENG_britain_demands_treaty_compliance
+				country_event = { id = mtg_britain.106 hours = 6 }
+				custom_effect_tooltip = ENG_demand_treaty_compliance_tt
+			}
+		}
+
+	}
+
+}

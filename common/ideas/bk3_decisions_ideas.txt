@@ -1,0 +1,65 @@
+ideas = {
+	
+	country = {
+	
+		operations_army_attack_03 = {
+		
+			allowed = {
+				OR = {
+					original_tag = ENG
+					original_tag = SAF
+					original_tag = AST
+				}
+			}
+			
+			modifier = {
+				army_attack_factor = 0.03
+			}
+		}
+		
+		operations_army_speed_05 = {
+			
+			allowed = {
+				OR = {
+					original_tag = ENG
+					original_tag = SAF
+					original_tag = AST
+				}
+			}
+			
+			modifier = {
+				army_speed_factor = 0.05
+			}
+		}
+		
+		operations_army_attack_04 = {
+			
+			allowed = {
+				OR = {
+					original_tag = ENG
+					original_tag = SAF
+					original_tag = AST
+				}
+			}
+			
+			modifier = {
+				army_attack_factor = 0.04
+			}
+		}
+		
+		operations_army_defence_05 = {
+		
+			allowed = {
+				OR = {
+					original_tag = ENG
+					original_tag = SAF
+					original_tag = AST
+				}
+			}
+			
+			modifier = {
+				army_defence_factor = 0.05
+			}
+		}
+	}
+}

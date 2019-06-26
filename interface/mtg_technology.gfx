@@ -1,0 +1,97 @@
+spriteTypes = {
+
+   	#German amphibious vehicle#
+	    SpriteType = {
+		    name = "GFX_GER_amphibious_mechanized_infantry_medium"
+		    texturefile = "gfx/interface/technologies/ger_amphibious_mech_1.dds"
+	    }
+		
+		SpriteType = {
+		    name = "GFX_GER_amphibious_mechanized_infantry_2_medium"
+		    texturefile = "gfx/interface/technologies/ger_amphibious_mech_2.dds"
+	    }
+		
+	#German amphibious tank#		
+		SpriteType = {
+		    name = "GFX_GER_amphibious_tank_medium"
+		    texturefile = "gfx/interface/technologies/ger_amphibious_tank_1.dds"
+	    }
+	
+	    SpriteType = {
+		    name = "GFX_GER_amphibious_tank_2_medium"
+		    texturefile = "gfx/interface/technologies/ger_amphibious_tank_2.dds"
+	    }
+		
+	#Soviet amphibious tank#		
+		SpriteType = {
+		    name = "GFX_SOV_amphibious_tank_medium"
+		    texturefile = "gfx/interface/technologies/sov_amphibious_tank_1.dds"
+	    }
+	
+	    SpriteType = {
+		    name = "GFX_SOV_amphibious_tank_2_medium"
+		    texturefile = "gfx/interface/technologies/sov_amphibious_tank_2.dds"
+	    }
+
+   	#American amphibious vehicle#
+	    SpriteType = {
+		    name = "GFX_USA_amphibious_mechanized_infantry_medium"
+		    texturefile = "gfx/interface/technologies/usa_amphibious_mech_1.dds"
+	    }
+		
+		SpriteType = {
+		    name = "GFX_USA_amphibious_mechanized_infantry_2_medium"
+		    texturefile = "gfx/interface/technologies/usa_amphibious_mech_2.dds"
+	    }
+
+    #American amphibious tank#		
+		SpriteType = {
+		    name = "GFX_USA_amphibious_tank_medium"
+		    texturefile = "gfx/interface/technologies/usa_amphibious_tank_1.dds"
+	    }
+	
+	    SpriteType = {
+		    name = "GFX_USA_amphibious_tank_2_medium"
+		    texturefile = "gfx/interface/technologies/usa_amphibious_tank_2.dds"
+	    }
+
+	#British amphibious tank#		
+		SpriteType = {
+		    name = "GFX_ENG_amphibious_tank_medium"
+		    texturefile = "gfx/interface/technologies/eng_amphibious_tank_1.dds"
+	    }
+	
+	    SpriteType = {
+		    name = "GFX_ENG_amphibious_tank_2_medium"
+		    texturefile = "gfx/interface/technologies/eng_amphibious_tank_2.dds"
+	    }
+		
+    #British amphibious vehicle#
+	    SpriteType = {
+		    name = "GFX_ENG_amphibious_mechanized_infantry_medium"
+		    texturefile = "gfx/interface/technologies/eng_amphibious_mech_1.dds"
+	    }
+
+		
+   	#Japanese amphibious vehicle#
+	    SpriteType = {
+		    name = "GFX_JAP_amphibious_mechanized_infantry_medium"
+		    texturefile = "gfx/interface/technologies/jap_amphibious_mech_1.dds"
+	    }
+
+   	#Japanese amphibious tank#		
+		SpriteType = {
+		    name = "GFX_JAP_amphibious_tank_medium"
+		    texturefile = "gfx/interface/technologies/jap_amphibious_tank_1.dds"
+	    }
+	
+	    SpriteType = {
+		    name = "GFX_JAP_amphibious_tank_2_medium"
+		    texturefile = "gfx/interface/technologies/jap_amphibious_tank_2.dds"
+	    }
+
+		
+
+
+		
+}

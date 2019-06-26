@@ -1,0 +1,107 @@
+#######
+# MANCHUKUO TANK
+#######
+
+	
+	
+#--------------------------------------------------------------------------------------------------------------------------------------------	
+#--------------------------------------------------------------------------------------------------------------------------------------------	
+
+
+
+	
+	entity = {
+		clone = "light_armor_entity"
+		name = "MAN_light_armor_entity"
+		pdxmesh = "JAP_tank_light_mesh"
+		scale = 1
+
+	}
+	
+	entity = {
+		clone = "JAP_light_armor_0_entity"
+		name = "MAN_light_armor_entity"
+		pdxmesh = "JAP_light_tank_0_mesh"
+		scale = 1
+
+	}
+	
+	entity = {
+		clone = "JAP_light_armor_2_entity"
+		name = "MAN_light_armor_entity"
+		pdxmesh = "JAP_light_tank_2_mesh"
+		scale = 1
+
+	}
+	
+	entity = {
+		clone = "medium_armor_entity"
+		name = "MAN_medium_armor_entity"
+		pdxmesh = "JAP_tank_medium_mesh"
+		scale = 1.3
+
+	}
+	
+	entity = {
+		clone = "JAP_medium_armor_1_entity"
+		name = "MAN_medium_armor_entity"
+		pdxmesh = "JAP_medium_tank_1_mesh"
+		scale = 1.3
+
+	}
+	
+	entity = {
+		clone = "JAP_medium_armor_2_entity"
+		name = "MAN_medium_armor_entity"
+		pdxmesh = "JAP_medium_tank_2_mesh"
+		scale = 1.3
+
+	}
+	
+	entity = {
+		clone = "heavy_armor_entity"
+		name = "MAN_heavy_armor_entity"
+		pdxmesh = "JAP_tank_heavy_mesh"
+		scale = 1
+
+	}
+	
+	entity = {
+		clone = "JAP_heavy_armor_1_entity"
+		name = "MAN_heavy_armor_entity"
+		pdxmesh = "JAP_heavy_tank_1_mesh"
+		scale = 1
+
+	}
+	
+	entity = {
+		clone = "JAP_heavy_armor_2_entity"
+		name = "MAN_heavy_armor_entity"
+		pdxmesh = "JAP_heavy_tank_2_mesh"
+		scale = 1
+
+	}
+	
+	
+	entity = {
+		clone = "JAP_super_heavy_armor_entity"
+		name = "MAN_super_heavy_armor_entity"
+		pdxmesh = "JAP_super_heavy_tank_mesh"
+		scale = 1
+
+	}
+	
+	entity = {
+		clone = "JAP_modern_armor_entity"
+		name = "MAN_modern_armor_entity"
+		pdxmesh = "JAP_modern_armor_mesh"
+		scale = 1
+
+	}
+	
+	
+#--------------------------------------------------------------------------------------------------------------------------------------------	
+#--------------------------------------------------------------------------------------------------------------------------------------------	
+
+
+	

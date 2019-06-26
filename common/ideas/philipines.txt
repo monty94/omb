@@ -1,0 +1,441 @@
+ideas = {
+
+		country = {
+	
+		phi_expandarmy = {			
+			
+			allowed = {
+				original_tag = "PHI"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			
+			modifier = { 
+ 				conscription = 0.02
+ 			}
+		}
+		
+		phi_rahatyasam = {			
+			
+			allowed = {
+				original_tag = "PHI"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_morale_bonus
+			
+			modifier = {
+			consumer_goods_factor = -0.05
+
+			}
+		}
+		
+		phi_hizmet = {			
+			
+			allowed = {
+				original_tag = "PHI"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			
+			removal_cost = -1
+			
+			picture = HUN_treaty_of_triannon
+			
+			modifier = {
+			consumer_goods_factor = 0.15
+			}
+		}
+		
+		phi_abdyardim = {			
+			
+			allowed = {
+				original_tag = "PHI"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			
+			removal_cost = -1
+			picture = generic_army_war_college
+			
+			modifier = {
+			 	consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		phi_hastanemasraf = {			
+			
+			allowed = {
+				original_tag = "PHI"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			
+			
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.20 		
+			}
+		}
+		
+		phi_hastaadam = {			
+			
+			allowed = {
+				original_tag = "PHI"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.05  
+			}
+		}
+		
+		phi_ucuzkonvoy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+			
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		phi_kalifiyeasker = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				special_forces_cap = 0.1
+			}
+		}
+	}
+	
+	political_advisor = {
+
+		PHI_sergio_osmena = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		PHI_emilio_aguinaldo = {
+
+			picture = generic_political_advisor_asia_3
+				
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { popular_figurehead }
+		}
+
+		PHI_juan_sumulong = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { prince_of_terror }
+		}
+	}	
+
+	# POLITICAL
+		
+	army_chief = {
+		
+		PHI_leoncio_s_tan = {
+			
+			picture = generic_army_asia_2
+
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+
+		PHI_basilio_j_valdez = {
+
+			picture = generic_army_asia_4
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	air_chief = {
+		
+
+		PHI_pelagio_cruz = {
+			
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		PHI_edwin_andrews = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+		
+
+		PHI_santiago_nuval = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = PHI
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		PHI_eustacio_orobia = {
+			
+			picture = generic_navy_asia_3
+
+			allowed = {
+				original_tag = PHI
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		PHI_vicente_p_lim = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PHI_heraclio_alano = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PHI_basilio_fernando = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { air_airborne_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PHI_jose_v_andrada = {
+
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+
+
+	theorist = {
+		PHI_benito_n_ebuen = {
+
+			picture = generic_army_asia_5
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		PHI_ramon_a_alcaraz = { 
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		PHI_victor_h_dizon = {
+
+			picture = generic_navy_asia_3
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+
+	}
+
+
+
+}

@@ -1,0 +1,133 @@
+upgrades = {
+	#INF EQ
+	INF_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.035
+	}
+	
+	INF_SA_upgrade = {
+		max_level = 5
+
+		cost = land
+		soft_attack = 0.03
+	}
+
+	INF_defence_upgrade = {
+		max_level = 5
+
+		cost = land
+		defense = 0.02
+		maximum_speed = -0.02
+	}
+	
+	#ART EQ
+	ART_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.02
+	}
+	
+	ART_SA_upgrade = {
+		max_level = 5
+
+		cost = land
+		soft_attack = 0.02
+		reliability = -0.02
+	}
+	
+	ART_HA_upgrade = {
+		max_level = 5
+
+		cost = land
+		hard_attack = 0.02
+		ap_attack = 0.02
+		reliability = -0.02
+	}
+	
+	ART_defence_upgrade = {
+		max_level = 5
+
+		cost = land
+		defense = 0.02
+		breakthrough = 0.02
+	}
+	
+	#AT EQ
+	AT_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.02
+	}
+	
+	AT_pierce_upgrade = {
+		max_level = 5
+
+		cost = land
+		ap_attack = 0.02
+		reliability = -0.02
+	}
+	
+	AT_HA_upgrade = {
+		max_level = 5
+
+		cost = land
+		hard_attack = 0.02
+		reliability = -0.02
+	}
+	
+	
+	#AA EQ
+	AA_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.02
+	}
+	
+	AA_AA_upgrade = {
+		max_level = 5
+
+		cost = land
+		air_attack = 0.025
+		reliability = -0.02
+	}
+	
+	AA_HA_upgrade = {
+		max_level = 5
+
+		cost = land
+		hard_attack = 0.02
+		ap_attack = 0.02
+		reliability = -0.02
+	}
+
+	
+	#MOT EQ
+	MOT_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.02
+	}
+
+	#MECH EQ
+	MECH_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.02
+	}
+	
+	MECH_attack_upgrade = {
+		max_level = 1
+
+		cost = land
+		ap_attack = 0.02
+		reliability = -0.02
+	}
+
+}

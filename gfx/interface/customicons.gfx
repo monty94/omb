@@ -1,0 +1,22 @@
+spriteTypes = { 
+ 
+	SpriteType = {
+		name = "GFX_idea_french_attrac"
+		texturefile = "gfx/interface/ideas/idea_french_attrac.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_wariour_spirit_idea"
+		texturefile = "gfx/interface/ideas/idea_wariour_spirit_idea.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_ikigai"
+		texturefile = "gfx/interface/ideas/idea_ikigai.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_hirohito"
+		texturefile = "gfx/interface/ideas/JAP/idea_hirohito.dds"
+	}
+ 
+ }

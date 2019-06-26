@@ -1,0 +1,517 @@
+focus_tree = {
+id = 'ireland'
+country = {
+factor=0
+modifier = {
+add = 10
+tag = IRE
+}
+}
+default = no
+#Custom focuses start here
+#Focus for IRE_ExpandArmy 
+		focus = { 
+		id = ire_expandarmy 
+		icon = GFX_goal_generic_axis_build_infantry 
+		ai_will_do = { factor = 0} 
+ x =18 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_manpower = 100000 
+  
+ add_tech_bonus = { 
+ bonus = 1 
+ uses = 1 
+ category = land_doctrine 
+ } 
+ 			 
+ } 
+ }
+ 
+ 	focus = {
+		id = irefocus_on_mobile
+		icon = GFX_focus_hol_liberation
+		prerequisite = { focus = ire_landdoctrine3 }
+		mutually_exclusive = { focus = irefocus_on_battleplan }
+		mutually_exclusive = { focus = irefocus_on_firepower }
+		x = 0
+		y = 2
+		relative_position_id = ire_landdoctrine3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_on_mobile_tt 
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Edward Jhan"
+					gfx = "GFX_can1"
+					traits = { armor_officer skilled_staffer panzer_leader }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3
+				}
+
+
+			}
+		}
+	}
+	
+	focus = {
+		id = irefocus_on_firepower
+		icon = GFX_focus_hol_united_netherlands
+		prerequisite = { focus = ire_landdoctrine3 }
+		mutually_exclusive = { focus = irefocus_on_battleplan }
+		mutually_exclusive = { focus = irefocus_on_mobile }
+		x = -2
+		y = 2
+		relative_position_id = ire_landdoctrine3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_on_firepower_tt
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Clark Comenti"
+					gfx = "GFX_komenti1"
+					traits = { infantry_officer skilled_staffer trait_engineer trickster  }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = irefocus_on_battleplan
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		prerequisite = { focus = ire_landdoctrine3 }
+		mutually_exclusive = { focus = irefocus_on_firepower }
+		mutually_exclusive = { focus = irefocus_on_mobile }
+		x = 2
+		y = 2
+		relative_position_id = ire_landdoctrine3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_on_battleplan_tt 
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Barnabas Gringer"
+					gfx = "GFX_can2"
+					traits = { career_officer infantry_officer skilled_staffer infantry_leader commando }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 2
+				}
+			}
+		}
+	}
+ 
+ #Focus for IRE_SecondEnglandx 
+		focus = { 
+		id = ire_secondenglandx 
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties 
+		ai_will_do = { factor = 0} 
+ x =8 
+ y =0
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ IRE = { transfer_state  = 119 } 
+ add_political_power = 120 
+  
+ 119 = { 
+ add_extra_state_shared_building_slots = 1 
+ add_building_construction = { 
+ type = industrial_complex 
+ level = 1 
+ instant_build = yes 
+ } 
+ } 
+ } 
+ }#Focus for IRE_Mot 
+		focus = { 
+		id = ire_mot 
+		icon = GFX_goal_generic_army_motorized 
+		ai_will_do = { factor = 0} 
+ x =16 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_expandarmy} 
+ cost = 5  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ uses = 1 
+ bonus = 1 
+ technology = motorised_infantry 
+ } 
+ } 
+ }#Focus for IRE_LandDoctrine 
+		focus = { 
+		id = ire_landdoctrine 
+		icon = GFX_goal_generic_army_doctrines 
+		ai_will_do = { factor = 0} 
+ x =20 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_expandarmy} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ bonus = 1 
+ uses = 1 
+ category = land_doctrine 
+ } 
+ } 
+ }#Focus for IRE_LeninsterHighways 
+		focus = { 
+		id = ire_leninsterhighways 
+		icon = GFX_goal_generic_construct_infrastructure 
+		ai_will_do = { factor = 0} 
+ x =5 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_secondenglandx} 
+ cost = 5  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ 113 = { 
+ add_building_construction = { 
+ type = infrastructure 
+ level = 2 
+ instant_build = yes 
+ } 
+ } 
+ } 
+ }#Focus for IRE_Excvation 
+		focus = { 
+		id = ire_excvation 
+		icon = GFX_goal_generic_construction2 
+		ai_will_do = { factor = 0} 
+ x =11 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_secondenglandx} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_resource = { type = oil amount = 4 state = 113 } 
+ add_resource = { type = steel amount = 8 state = 113 } 
+ add_resource = { type = tungsten amount = 4 state = 113 } 
+ } 
+ }#Focus for IRE_Mech 
+		focus = { 
+		id = ire_mech 
+		icon = GFX_goal_generic_build_tank 
+		ai_will_do = { factor = 0} 
+ x =16 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_mot} 
+ cost = 5  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ uses = 1 
+ bonus = 1
+ technology = mechanised_infantry
+ } 
+ } 
+ }#Focus for IRE_LandDoctrine2 
+		focus = { 
+		id = ire_landdoctrine2 
+		icon = GFX_goal_generic_army_doctrines 
+		ai_will_do = { factor = 0} 
+ x =20 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_landdoctrine} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ bonus = 1 
+ uses = 1 
+ category = land_doctrine 
+ } 
+ } 
+ }#Focus for IRE_DevelopTheIreland 
+		focus = { 
+		id = ire_developtheireland 
+		icon = GFX_focus_chi_british_cooperation 
+		ai_will_do = { factor = 0} 
+ x =1 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_leninsterhighways} 
+ available = { threat > 0.1 } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ 119 = { 
+ add_extra_state_shared_building_slots = 4 
+ add_building_construction = { 
+ type = industrial_complex 
+ level = 2 
+ instant_build = yes 
+ } 
+ } 
+ } 
+ }#Focus for IRE_Factory1 
+		focus = { 
+		id = ire_factory1 
+		icon = GFX_goal_generic_construct_civ_factory 
+		ai_will_do = { factor = 0} 
+ x =4 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_leninsterhighways} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ 119 = { 
+ add_extra_state_shared_building_slots = 2 
+ add_building_construction = { 
+ type = industrial_complex 
+ level = 2 
+ instant_build = yes 
+ } 
+ } 
+ } 
+ }#Focus for IRE_Tank 
+		focus = { 
+		id = ire_tank 
+		icon = GFX_goal_generic_army_tanks 
+		ai_will_do = { factor = 0} 
+ x =16 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_mech} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ bonus = 1 
+ uses = 1
+ category = armor 
+ } 
+ } 
+ }#Focus for IRE_LandDoctrine3 
+		focus = { 
+		id = ire_landdoctrine3 
+		icon = GFX_goal_generic_army_doctrines 
+		ai_will_do = { factor = 0} 
+ x =20 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_landdoctrine2} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ bonus = 1 
+ uses = 1 
+ category = land_doctrine 
+ } 
+ } 
+ }#Focus for IRE_Factory2 
+		focus = { 
+		id = ire_factory2 
+		icon = GFX_goal_generic_construct_civ_factory 
+		ai_will_do = { factor = 0} 
+ x =4 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_factory1} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ 119 = { 
+ add_extra_state_shared_building_slots = 2 
+ add_building_construction = { 
+ type = industrial_complex 
+ level = 2 
+ instant_build = yes 
+ } 
+ } 
+ } 
+ }#Focus for IRE_IRESLOT 
+		focus = { 
+		id = ire_ireslot 
+		icon = GFX_focus_research 
+		ai_will_do = { factor = 0} 
+ x =9 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_leninsterhighways} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_research_slot = 1 
+ } 
+ }#Focus for IRE_TankTraining 
+		focus = { 
+		id = ire_tanktraining 
+		icon = GFX_goal_continuous_armor_production 
+		ai_will_do = { factor = 0} 
+ x =16 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_tank} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ army_experience = 25
+ } 
+ }#Focus for IRE_SecretWeapons 
+		focus = { 
+		id = ire_secretweapons 
+		icon = GFX_goal_generic_secret_weapon 
+		ai_will_do = { factor = 0} 
+ x =9 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_ireslot} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+ bonus = 1 
+ uses = 2
+ category = electronics 
+ category = nuclear 
+ category = rocketry 
+ } 
+ } 
+ }#Focus for IRE_Slot 
+		focus = { 
+		id = ire_slot 
+		icon = GFX_goal_generic_construction 
+		ai_will_do = { factor = 0} 
+ x =2 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_factory2} 
+ cost = 5
+  available_if_capitulated = yes  
+ completion_reward = { 
+ 113 = { 
+ add_extra_state_shared_building_slots = 4 
+ } 
+ } 
+ }#Focus for IRE_Millitary 
+		focus = { 
+		id = ire_millitary 
+		icon = GFX_goal_generic_construct_mil_factory 
+		ai_will_do = { factor = 0} 
+ x =6 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_factory2} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ 119 = { 
+ add_extra_state_shared_building_slots = 2
+ add_building_construction = { 
+ type = arms_factory 
+ level = 2 
+ instant_build = yes 
+ } 
+ } 
+ } 
+ }#Focus for IRE_SLOT2 
+		focus = { 
+		id = ire_slot2 
+		icon = GFX_focus_research2 
+		ai_will_do = { factor = 0} 
+ x =9 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ire_secretweapons} 
+ available = { threat > 0.25 } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_research_slot = 1 
+ } 
+ }#End of focuses 
+}
