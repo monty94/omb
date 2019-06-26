@@ -1,8 +1,0 @@
-spriteTypes = {
-	
-	#####--Hebridean leaders (Kingdom/Duchy/Lords of the Isles)--#####
-	spriteType = {
-		name = "GFX_Portrait_Argentina_Fanny_Jabcovsky"
-		texturefile = "gfx/leaders/ARG/Portrait_Argentina_Fanny_Jabcovsky.dds"
-	}
-}
